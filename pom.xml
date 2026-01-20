@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!--    parent-->
+	<parent>
+		<groupId>com.safaricom.dxl</groupId>
+		<artifactId>dxl-webflux-starter-parent</artifactId>
+		<version>1.4.8</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.safaricom.microservices</groupId>
+	<artifactId>ms-enewspaper-subscription</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>ms-enewspaper-subscription</name>
+	<description>DxL reactive micro service starter</description>
+	<properties>
+		<sonar.exclusions>
+			**/model/**/*.java,
+			**/controller/*,
+			**/exception/*,
+			**/repository/*,
+			**/security/*,
+			**/utils/**/*.java,
+			**/config/*,
+			**/service/**/*.java
+		</sonar.exclusions>
+		<sonar.coverage.exclusions>
+			**/MsStarterApplication.java,
+			**/model/**/*.java,
+			**/controller/*,
+			**/exception/*,
+			**/repository/*,
+			**/security/*,
+			**/utils/**/*.java,
+			**/config/*,
+			**/service/**/*.java
+		</sonar.coverage.exclusions>
+	</properties>
+	<dependencies>
+		<!--        Dataabse-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-r2dbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.r2dbc</groupId>
+			<artifactId>r2dbc-pool</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.r2dbc</groupId>
+			<artifactId>r2dbc-postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+	</dependencies>
+
+
+	<!--repositories-->
+	<repositories>
+		<repository>
+			<id>dxl-releases</id>
+			<name>safaricom-dxl-releases</name>
+			<url>https://jfrog.safaricom.co.ke/artifactory/dxl-releases/</url>
+		</repository>
+		<repository>
+			<id>dxl-snapshots</id>
+			<name>safaricom-dxl-snapshot</name>
+			<url>https://jfrog.safaricom.co.ke/artifactory/dxl-snapshot/</url>
+		</repository>
+	</repositories>
+</project>
+
+
