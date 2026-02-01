@@ -10,9 +10,8 @@ VPN connection
 Running the application
 From a terminal, run the commands below:
 
-git clone https://gitlab.safaricom.co.ke/MicroServices/dxl-build/ms-enewspaper-subscription.git
 git checkout develop
 cd ms-enewspaper-subscription
 mvn clean install
 java -ea -jar target/ms-enewspaper-subscription-1.0.0.jar
-A technical documentation can be found at [Confluence](https://safaricom.atlassian.net/wiki/spaces/MicroservicesDocumentation/pages/2317123659/ePaper+Design+LLD)
+
